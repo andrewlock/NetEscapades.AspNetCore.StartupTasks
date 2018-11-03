@@ -3,7 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2048
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetEscapades.AspNetCore.StartupTasks", "NetEscapades.AspNetCore.StartupTasks\NetEscapades.AspNetCore.StartupTasks.csproj", "{0263F734-28BD-40B8-8DBB-34C9CD6FA6B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetEscapades.AspNetCore.StartupTasks", "src\NetEscapades.AspNetCore.StartupTasks\NetEscapades.AspNetCore.StartupTasks.csproj", "{E493D898-8273-471F-B0CB-478B6298B58F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D9C400FC-46A6-4754-BA04-504231BBCAB0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AAB52120-F0D9-496B-9D54-15E3DAEA05D1}"
+	ProjectSection(SolutionItems) = preProject
+		appveyor.yml = appveyor.yml
+		build.cake = build.cake
+		Directory.Build.props = Directory.Build.props
+		NetEscapades.AspNetCore.StartupTasks.ruleset = NetEscapades.AspNetCore.StartupTasks.ruleset
+		releasenotes.props = releasenotes.props
+		version.props = version.props
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,13 +23,16 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0263F734-28BD-40B8-8DBB-34C9CD6FA6B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0263F734-28BD-40B8-8DBB-34C9CD6FA6B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0263F734-28BD-40B8-8DBB-34C9CD6FA6B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0263F734-28BD-40B8-8DBB-34C9CD6FA6B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E493D898-8273-471F-B0CB-478B6298B58F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E493D898-8273-471F-B0CB-478B6298B58F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E493D898-8273-471F-B0CB-478B6298B58F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E493D898-8273-471F-B0CB-478B6298B58F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E493D898-8273-471F-B0CB-478B6298B58F} = {D9C400FC-46A6-4754-BA04-504231BBCAB0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {27B7F076-5BD0-428E-A280-4F88BAAC2B54}

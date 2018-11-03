@@ -1,0 +1,23 @@
+<Project>
+
+  <Import Project="version.props" />
+
+  <PropertyGroup>
+    <Authors>Andrew Lock</Authors>
+    <Product>NetEscapades.AspNetCore.StartupTasks</Product>
+    <Copyright>Copyright © AndrewLock</Copyright>
+    <NeutralLanguage>en-GB</NeutralLanguage>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/andrewlock/NetEscapades.AspNetCore.StartupTasks/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/andrewlock/NetEscapades.AspNetCore.StartupTasks</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/andrewlock/NetEscapades.AspNetCore.StartupTasks</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <DebugType>embedded</DebugType>
+    <IsPackable>false</IsPackable>
+    <NoPackageAnalysis>true</NoPackageAnalysis>
+    <LangVersion>7.3</LangVersion>
+  </PropertyGroup>
+
+  <Import Project="releasenotes.props" />
+
+</Project>
