@@ -16,7 +16,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="stylecop.json" />
     <Compile Include="..\NetEscapades.AspNetCore.StartupTasks.Sources\*.cs" />
   </ItemGroup>
 

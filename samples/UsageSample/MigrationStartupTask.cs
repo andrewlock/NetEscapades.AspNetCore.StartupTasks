@@ -17,7 +17,7 @@ namespace UsageSample
             _serviceProvider = serviceProvider;
         }
 
-        public async Task ExecuteAsync(CancellationToken cancellationToken = default)
+        public async Task StartAsync(CancellationToken cancellationToken = default)
         {
             using (var scope = _serviceProvider.CreateScope())
             {
@@ -25,6 +25,11 @@ namespace UsageSample
 
                 await dbContext.Database.MigrateAsync();
             }
+        }
+
+        public Task ShutdownAsync(CancellationToken cancellationToken = default)
+        {
+            return Task.CompletedTask;
         }
     }
 }
