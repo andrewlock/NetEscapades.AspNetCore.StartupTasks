@@ -10,6 +10,8 @@ namespace Microsoft.Extensions.DependencyInjection
     /// </summary>
     public static class ServiceCollectionExtensions
     {
+        private static bool _alreadyAddedDecorator;
+
         /// <summary>
         /// Add an <see cref="IStartupTask"/> registration for the given type.
         /// </summary>
@@ -24,8 +26,7 @@ namespace Microsoft.Extensions.DependencyInjection
 
         private static IServiceCollection AddTaskExecutingServer(this IServiceCollection services)
         {
-            var decoratorType = typeof(TaskExecutingServer);
-            if (services.Any(service => service.ImplementationType == decoratorType))
+            if (_alreadyAddedDecorator)
             {
                 // We've already decorated the IServer (make this call idempotent)
                 return services;
@@ -38,7 +39,7 @@ namespace Microsoft.Extensions.DependencyInjection
                 throw new Exception("Could not find any registered services for type IServer. IStartupTask requires using an IServer");
             }
 
-            var decoratorDescriptor = CreateDecoratorDescriptor(serverDescriptor, decoratorType);
+            var decoratorDescriptor = CreateDecoratorDescriptor(serverDescriptor, typeof(TaskExecutingServer));
 
             var index = services.IndexOf(serverDescriptor);
 
