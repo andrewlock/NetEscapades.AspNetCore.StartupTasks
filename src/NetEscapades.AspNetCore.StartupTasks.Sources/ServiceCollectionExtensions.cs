@@ -47,6 +47,8 @@ namespace Microsoft.Extensions.DependencyInjection
             services.Insert(index, decoratorDescriptor);
 
             services.Remove(serverDescriptor);
+            
+            _alreadyAddedDecorator = true;
 
             return services;
         }
