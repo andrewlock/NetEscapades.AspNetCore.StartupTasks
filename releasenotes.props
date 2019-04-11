@@ -1,11 +1,11 @@
 <Project>
   <PropertyGroup>
-    <PackageReleaseNotes Condition="'$(VersionPrefix)' == '0.1.0'">
+    <PackageReleaseNotes Condition="'$(VersionPrefix)' == '0.1.1'">
       <![CDATA[
 
-Initial release:
+Bug Fix:
 
-Add support for executing tasks asynchronously on application startup
+* Adding multiple startup tasks causes each to be executed multiple times (#2) (thanks to @Gonyoda)
 
 ]]>
     </PackageReleaseNotes>
